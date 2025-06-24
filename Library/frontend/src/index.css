@@ -1,0 +1,98 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1e1e2f;
+  color: #fff;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #2d2d2d;
+  color: #00e5ff;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+a {
+  color: #58920b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #00a6ff;
+}
+
+a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #00a6ff; /* заміна градієнта */
+  transition: width 0.3s ease;
+}
+
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid #00e5ff;
+  outline-offset: 2px;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Hide elements with .visually-hidden but keep them accessible for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Common layout classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
